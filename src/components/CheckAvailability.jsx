@@ -30,7 +30,7 @@ function CheckAvailability() {
         const selectedMonth = (date.getMonth() + 1).toString().padStart(2, "0");
 
         try {
-            const response = await fetch("http://localhost:5000/api/disponibilidad", {
+            const response = await fetch("https://incatrailapi.onrender.com/api/disponibilidad", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ year: selectedYear, month: selectedMonth, route: route })
